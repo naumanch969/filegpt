@@ -1,0 +1,25 @@
+
+.chatbox::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  .chatbox::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid #140d46;
+    border-radius: 2rem;
+  }
+  
+  /* Handle */
+  .chatbox::-webkit-scrollbar-thumb {
+    background: #140d46;
+    border-radius: 2rem;
+  }
+  
+  /* Handle on hover */
+  .chatbox::-webkit-scrollbar-thumb:hover {
+    background: #140d46;
+    transition: all;
+    transition-delay: 1s;
+  }
