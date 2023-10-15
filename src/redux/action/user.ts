@@ -35,14 +35,4 @@ export const updateUser = (userData: { name: string, imageUrl: string, oldPasswo
     } catch (err: any) {
         dispatch(error(err.message))
     }
-}
-export const createCheckoutSubscription = (): AsyncAction => async (dispatch, getState) => {
-    try {
-        dispatch(start())
-        const { data } = await api.createCheckoutSubscription()
-        dispatch(createCheckoutSubscriptionReducer(data))
-        dispatch(end())
-    } catch (err: any) {
-        dispatch(error(err.message))
-    }
-}
+} 

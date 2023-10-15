@@ -38,10 +38,10 @@ const Books = () => {
 
   /////////////////////////////////////////// USE EFFECTS ///////////////////////////////////////////////
   useEffect(() => {
-    // console.log('loggedUser',loggedUser)
-    // console.log('Boolean(loggedUser?.name)', Boolean(loggedUser?.name))
-    // if (!(loggedUser?.name?.length > 0)) return router.push('/auth/login')
-    // if (!(loggedUser?.category?.length > 0)) return router.push('/auth/category')
+    console.log('loggedUser', loggedUser)
+    console.log('Boolean(loggedUser?.name)', Boolean(loggedUser?.name))
+    if (loggedUser == null) return router.push('/auth/login')
+    if (!Boolean(loggedUser?.category)) return router.push('/auth/category')
     const call = async () => {
       try {
         const { data: catResult }: { data: Category } = await getBookCategory(category)

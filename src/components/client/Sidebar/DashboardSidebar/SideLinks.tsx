@@ -34,7 +34,7 @@ export default function SideLinks({ title, subcategories, active, subTools,categ
       {openMenu && subTools?.length > 0 && (
         <div className="w-full flex flex-col pl-4 pt-3">
           {subTools.map((subTool, index) => (
-            <Link
+            <a
               // onClick={() => { onClick && onClick() }}
               href={`/dashboard/tools/${categoryId}/${subTool.id}`}
               prefetch={false}
@@ -42,7 +42,7 @@ export default function SideLinks({ title, subcategories, active, subTools,categ
               key={index}
             >
               {subTool.name}
-            </Link>
+            </a>
           ))}
         </div>
       )}
@@ -60,7 +60,7 @@ export default function SideLinks({ title, subcategories, active, subTools,categ
       {openMenu && subcategories && subcategories?.length > 0 && (
         <div className="w-full flex flex-col pl-4 pt-3">
           {subcategories.map((subcategory, index) => (
-            <Link
+            <a
               type="button"
               // onClick={() => { onClick && onClick() }}
               href={`/dashboard/books/${categoryId}/${subcategory.id}`}
@@ -68,7 +68,7 @@ export default function SideLinks({ title, subcategories, active, subTools,categ
               className="capitalize text-start px-6 py-3 hover:bg-slate-200 transition-all duration-75 rounded-lg cursor-pointer"
             >
               {subcategory.name}
-            </Link>
+            </a>
           ))}
         </div>
       )}
